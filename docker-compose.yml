@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+  postgres:
+    image: postgres:9.6.20
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: hydra
+    ports:
+      - "65432:5432"
+    volumes:
+      - ~/pg-hydra:/var/lib/postgresql/data
